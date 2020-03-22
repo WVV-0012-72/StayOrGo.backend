@@ -4,8 +4,8 @@ SELECT m.m_time, m.fe_name,
 	m.m_num_devices,
 	CASE m.m_num_devices
 		WHEN m.m_num_devices < c.c_threshold_y THEN "Go!"
-		WHEN m.m_num_devices < c.c_threshold_r THEN "Try.."
-		ELSE "Stay!"
+		WHEN m.m_num_devices < c.c_threshold_r THEN "Try.. (<"||c.c_threshold_r||")"
+		ELSE "Stay! (>"||c.c_threshold_r||")"
 	END
 FROM measurement m
 INNER JOIN coverage c ON c.fe_name=m.fe_name
