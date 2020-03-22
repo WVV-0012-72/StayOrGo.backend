@@ -24,7 +24,7 @@ while True:
         frontend =(d_thing, d_timestamp, d_cputemp)
 
         # extract measurement data
-        m_time = d_content['time']
+        m_time = d_content['unixtime']
         m_messages = d_content['messages']
         m_anzap = d_content['anzap']
         m_macs_area = d_content['macs_area']
@@ -51,6 +51,6 @@ while True:
         db.commit()
 
         # hush little baby, don't say a word.. :-)
-        time.sleep(2)
+        time.sleep(1)
 
 db.close()
