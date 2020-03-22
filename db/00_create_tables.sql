@@ -4,14 +4,18 @@ CREATE TABLE frontend (
 	fe_cputemp text not null
 );
 
-CREATE TABLE coverage (
-	fe_name text not null primary key,
-	c_position text not null,
-	c_radius integer not null,
-	c_threshold_y integer,
-	c_threshold_r integer
+CREATE TABLE location (
+	l_name text not null primary key,
+	fe_name text not null,
+	l_latitude text not null,
+	l_longitude text not null,
+	l_radius integer not null,
+	l_threshold_y integer,
+	l_threshold_r integer,
+	FOREIGN KEY(fe_name) REFERENCES frontends(fe_name)
 );
 
+-- not needed anymore
 CREATE TABLE measurement (
 	fe_name text not null,
 	m_time text not null,

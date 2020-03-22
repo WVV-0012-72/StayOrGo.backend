@@ -1,8 +1,24 @@
 -- initial data insertion for ottmar's two piboxes
--- pi-box-02 at NETTO, 50m radius, 7ppl yellow, 12ppl red
+-- pi-box-02 at NETTO, 50m radius, 10ppl yellow, 15ppl red
 INSERT INTO frontend (fe_name, fe_last_time, fe_cputemp) VALUES ('pi-box-02', '', '');
-INSERT INTO coverage VALUES ('pi-box-02', 'NETTO - Kallmünz', 50, 7, 12);
+INSERT INTO location VALUES (
+	"Netto Kallmünz",
+	'pi-box-02',
+	"49.1614266",
+	"11.9460491",
+	50,
+	10,
+	15
+);
 
--- pi-box-02 at Aldi, 25m radius, 3ppl yellow, 5ppl red
+-- pi-box-02 at Aldi, 25m radius, 7ppl yellow, 12ppl red
 INSERT INTO frontend (fe_name, fe_last_time, fe_cputemp) VALUES ('pi-box-04', '', '');
-INSERT INTO coverage VALUES ('pi-box-04', 'Aldi Laaber', 25, 3, 5);
+INSERT INTO location VALUES (
+	"Aldi Laaber",
+	'pi-box-04',
+	"49.3508960",
+	"12.2244763",
+	25,
+	7,
+	12
+);
