@@ -1,0 +1,11 @@
+# get all location names
+SHOW TAG VALUES FROM crowd_size WITH KEY="location_name"
+
+``` bash
+HOST=95.179.161.77
+DB=stay_or_go
+USER=XXXXXX
+PASS=XXXXXX
+
+curl -G "$HOST:8086/query?db=$DB&u=$USER&p=$PASS&" --data-urlencode 'q=SHOW TAG VALUES FROM crowd_size WITH KEY="location_name"'
+```
